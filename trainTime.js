@@ -55,16 +55,22 @@ var config = {
     var dest = childSnapshot.val().dest;
     var trainTime = childSnapshot.val().start;
     var freq = childSnapshot.val().freq;
+
   
     // train Info
     console.log(trainName);
     console.log(dest);
     console.log(trainTime);
     console.log(freq);
-  
-  
-    var nextArrv = moment().diff(moment(trainTime, "X"), "arrival");
-    console.log(nextArrv);
+    
+    var firstTimeConverted = moment(nextArrv, "HH:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
+   
+    var nextArrv = moment().add(trainTime, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextArrv).format("hh:mm"));
+    
+
+
   
     // Calculate the total billed freq
     var arrival = nextArrv * freq;
@@ -75,7 +81,8 @@ var config = {
       $("<td>").text(trainName),
       $("<td>").text(dest),
       $("<td>").text(freq),
-      $("<td>").text(nextArrv),
+      $("<td>").text((nextArrv).format("hh:mm a")),
+    //   $("<td>").text(timeTill),
       );
   
     // Append the new row to the table
