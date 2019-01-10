@@ -70,10 +70,7 @@ var config = {
     console.log("ARRIVAL TIME: " + moment(nextArrv).format("hh:mm"));
     
 
-
-  
-    // Calculate the total billed freq
-    var arrival = nextArrv * freq;
+    var arrival = nextArrv - freq;
     console.log(arrival);
   
     // Create the new row
@@ -82,7 +79,7 @@ var config = {
       $("<td>").text(dest),
       $("<td>").text(freq),
       $("<td>").text((nextArrv).format("hh:mm a")),
-    //   $("<td>").text(timeTill),
+      $("<td>").text(arrival),
       );
   
     // Append the new row to the table

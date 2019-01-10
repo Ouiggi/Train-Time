@@ -35,9 +35,15 @@ body {
 }
 
 .card-header {
-    background-color: rgb(168, 149, 63);
+    background-color: rgba(168, 149, 63, 0.541);
     font-family: Cinzel Decorative;
     font-weight: bold;
     font-size: 20px;
     color: rgb(197, 5, 5);
+    text-shadow: 0px 0px 2px black;
+    
+}
+
+.overlay {
+    background-image: url(../images/ravenna.png) ;
 }
