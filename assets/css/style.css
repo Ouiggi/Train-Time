@@ -1,0 +1,15 @@
+#train-table th, td {
+      display: inline-block;
+      width: 16.575%;
+    }
+
+.jumbotron {
+    color: gold;
+    background-image: url(../images/Triforce.jpg);
+    background-position: center
+
+}
+
+.container {
+    background-color: #86724c
+}
